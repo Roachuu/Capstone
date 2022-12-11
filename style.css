@@ -1,0 +1,16 @@
+body{
+    background-color: wheat;
+}
+
+nav{
+    --aclc-color: #28195D;
+    background-color: var(--aclc-color);
+}
+
+.nav-link{
+    color: white;
+}
+
+.nav-link:hover{
+    color: grey;
+}
