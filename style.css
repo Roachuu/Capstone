@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400);
+
 body{
     background-color: white;
 }
@@ -5,6 +7,7 @@ body{
 nav{
     --aclc-color: #28195D;
     background-color: var(--aclc-color);
+    font-family: Roboto;
 }
 
 .nav-link{
@@ -67,8 +70,9 @@ h1, h2 {
 }
   
 h1 {
-    font-size: 36px;
-    
+    font-size: 100px;
+    font-weight: bold;
+
     @media (min-width: 480px) {
       font-size: 11.5vw;
     }
