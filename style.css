@@ -1,13 +1,18 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,400);
 
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Roboto;
+    --aclc-color: #28195D;
+}
+
 body{
     background-color: white;
 }
 
 nav{
-    --aclc-color: #28195D;
     background-color: var(--aclc-color);
-    font-family: Roboto;
 }
 
 .nav-link{
@@ -23,7 +28,7 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
     min-height: 100vh;
     background-color: #28195D;
     font-family: Roboto;
@@ -59,18 +64,50 @@ nav{
     50% {transform: translate(-50%, -2%) rotateZ(180deg);}
     100% {transform: translate(-50%, 0%) rotateZ(360deg);}
 }
+
+.Main-Content-wave * {
+    z-index: 1;
+}
+
+.welcome{
+    padding: 20px 100px;
+    text-align: center;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-button{
+    margin: 10px 10px 10px;
+    width: 200px;
+    height: 50px;
+    font-size: 15px;
+    background-color: #28195D;
+    border-radius: 15px;
+    color: white;
+    transition: all 0.5s;
+}
+
+.form-button:hover{
+    opacity: 0.6;
+}
+
+.Main-Content-wave p{
+    color:#28195D;
+}
   
-h1, h2 {
+.Main-Content-wave h1, .Main-Content-wave h2 {
     color: #28195D;
-    z-index: 10;
     margin: 0;
     font-weight: 300;
     line-height: 1.3;
     text-align: center;
 }
   
-h1 {
-    font-size: 100px;
+.Main-Content-wave h1 {
+    font-size: 90px;
     font-weight: bold;
 
     @media (min-width: 480px) {
@@ -78,10 +115,71 @@ h1 {
     }
 }
   
-h2 {
+.Main-Content-wave h2 {
     font-size: 14px;
     
     @media (min-width: 480px) {
       font-size: 3vw;
     }
+}
+
+.second-content, .third-content, .fourth-content, .footer {
+    background-color: var(--aclc-color);
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    flex-direction: row;
+}
+
+.second-content div{
+    margin: 20px;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 2%;
+}
+
+.second-content h1{
+    text-align: center;
+}
+
+.hidden{
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateY(-20%);
+    transition: all 0.5s ease;
+}
+
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+
+.text-container, .button-container{
+    margin: 25px;
+}
+
+.second-content{
+    padding: 50px;
+}
+
+.third-content{
+    padding: 50px;
+    color: white;
+    align-items: center;
+}
+
+.third-content .form-button{
+    width: 200px;
+    height: 100px;
+    font-size: 24px;
+    background-color: white;
+    color: black;
+    border: none;
+}
+
+.footer{
+    background-color: var(--aclc-color);
+    color: white;
 }
