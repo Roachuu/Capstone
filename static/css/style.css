@@ -11,8 +11,50 @@ body{
     background-color: white;
 }
 
-nav{
+.nav{
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: var(--aclc-color);
+}
+
+.nav-logo img{
+    margin-top: 3px;
+}
+
+.nav-logo, .nav-logo img{
+    width: 150px;
+}
+
+.nav-item-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-item{
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+}
+
+.nav-item:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.2s ease-out;
+}
+
+.nav-item:hover:after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 .nav-link{
@@ -21,6 +63,54 @@ nav{
 
 .nav-link:hover{
     color: grey;
+}
+
+.dropdown{
+    overflow: hidden;
+}
+
+.dropdown, .dropdown-button{
+    font: inherit;
+    margin: 0;
+}
+
+.dropdown-content-arrow{
+    display: none;
+    position: absolute;
+    background-color: var(--aclc-color);
+    width: 75px;
+    height: 24px;
+    z-index: 1001;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #1b1141;
+    width: 100%;
+    left: 0;
+    top: 69px;
+    color: white;
+    z-index: 1000;
+}
+
+.dropdown:hover .dropdown-content, .dropdown:hover .dropdown-content-arrow{
+    display: block;
+}
+
+.genre-section{
+    display: flex;
+    flex-direction: column;
+    flex: 50%;
+    margin: 10px;
+}
+
+.genre-section a{
+    margin: 10px;
+}
+
+.dropdown-item{
+    font-size: 20px;
 }
 
 .Main-Content-wave {
@@ -54,7 +144,7 @@ nav{
     
 .Main-Content-wave:after {
     bottom: 12vh;
-    opacity: .5;
+    opacity: 0.5;
     border-radius: 47%;
     animation-duration: 10s;
 }
@@ -180,6 +270,7 @@ nav{
 }
 
 .footer{
+    padding: 10px;
     background-color: var(--aclc-color);
     color: white;
 }
