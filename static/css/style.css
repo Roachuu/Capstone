@@ -1,0 +1,92 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400);
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Roboto;
+    --aclc-color: #1a237e;
+}
+
+.Main-Content-wave {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #1a237e;
+    font-family: Roboto;
+    overflow: hidden;
+}
+.Main-Content-wave:before, .Main-Content-wave:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    min-width: 300vw;
+    min-height: 300vw;
+    background-color: #fff3e0;
+    animation-name: rotate;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.Main-Content-wave:before {
+    bottom: 15vh;
+    border-radius: 45%;
+    animation-duration: 10s;
+}
+
+.Main-Content-wave:after {
+    bottom: 12vh;
+    opacity: .5;
+    border-radius: 47%;
+    animation-duration: 10s;
+}
+
+@keyframes rotate {
+    0% {transform: translate(-50%, 0) rotateZ(0deg);}
+    50% {transform: translate(-50%, -2%) rotateZ(180deg);}
+    100% {transform: translate(-50%, 0%) rotateZ(360deg);}
+}
+
+.Main-Content-wave * {
+    z-index: 1;
+}
+
+.bg{
+    background-image: url(/static/img/login/loginphoto.jpg); 
+    background-size: cover; 
+    background-position: center; 
+}
+
+.bg-login {
+    border-radius: 10px 0 0 10px;
+    height: 100vh;
+}
+
+
+body, html{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x:hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
