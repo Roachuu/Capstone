@@ -8,8 +8,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../static/css/style.css">
-        <link rel="stylesheet" href="/static/css/login.css">
-        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css">
     </head>
     <body>
 
@@ -17,59 +16,86 @@
         
         <div class="Main-Content-wave">
             <!--Login-->
-            <div class="container-main">
-                <div class="login-container">
+            <div class="container">
 
-                    <div class="img-login">
-                        <img src="/static/img/login/aclc_logo.png" alt="">
-                    </div>
-                    
-                    <div class="input-login">
-                        <div class="inputbox">
+                <!--Card-Panel-->
+                <div class="card-panel no-padding z-depth-4" style="border-radius: 10px;">
+                    <div class="row">
 
-                            <div class="login-header">
-                                <header>Login</header>
+                        <!--Left-Column-->
+                        <div class="col s5 bg bg-login hide-on-med-and-down">
+                            <div class="col">
+                                <img src="/static/img/logo/logo.png" class="responsive-img brand-logo left center-align" style="margin-top: 24px;">
                             </div>
-                            
-                            
-                            <div class="input-field">
-                                <input type="text" class="input" id="email" required autocomplete="off">
-                                <label for="email">Email</label>
-                            </div>
-                            
-                            <div class="input-field">
-                                <input type="password" class="input" id="password" required>
-                                <label for="password">Password</label>
-                            </div>
-                            
-                            <div class="submit">
-                                <input type="submit" class="submit" value="Login">
+                        </div>
+                        
+                        <!--Right-Column-->
+                        <div class="col s12 m12 l7 center-align" style="margin: 24px 0; padding: 0 96px 0 48px;">
+
+                            <!--Form-->
+                            <form action="">
+
+                                <!--Login-->
+                                <div class="row">
+                                    <h2 class="center-align">Login</h2>
+                                </div>
+
+                                <!--Divider-->
+                                <div class="divider"></div>
+
+                                <!--Login-->
+                                <div class="row">
+                                    <div class="col s12" style="margin-top: 24px">
+                                        <div class="input-field">
+                                            <i class="fa-solid fa-envelope prefix"></i>
+                                            <input id="email" type="email" class="validate" required>
+                                            <label class="active" for="email">Email</label>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <!--Password-->
+                                <div class="row">
+                                    <div class="col s12">
+                                        <div class="input-field">
+                                            <i class="fa-solid fa-lock prefix"></i>
+                                            <input id="password" type="password" class="validate" required>
+                                            <label class="active" for="password">Password</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--Remember-Me-->
+                                <div class="row">
+                                    <div class="col s12 m12 l6 no-padding left" style="margin: 12px 0;">
+                                        <label>
+                                            <input id="indeterminate-checkbox" type="checkbox">
+                                            <span>Remember Me</span>
+                                          </label>
+                                    </div>
+                                    
+                                    <!--Submit-Btn-->
+                                    <div class="col s12 l6 no-padding right" style="margin: 12px 0;">
+                                        <button class="btn waves-effect waves-light btn-large" type="submit" name="action">Submit
+                                            <i class="fa-solid fa-paper-plane right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
                                 
+                            <!--Sign-Up-->
+                            <div class="row">
+                                <div class="col s12" style="margin-top: 24px">
+                                    <span>Don't have an account? <a href="#">Sign up here</a></span>
+                                </div>
                             </div>
                         </div>
-                        
-                        <div class="bottom">
-                            <div class="left">
-                                <input type="checkbox" id="checkbox">
-                                <label for="checkbox">Remember Me</label>
-                            </div>
-
-                            <div class="right">
-                                <label><a href="#">Forgot Password?</a></label>
-                            </div>
-                        </div>
-
-                        <div class="signup">
-                            <span>Don't have an account? <a href="">Sign up here</a></span>
-                        </div>
-                        
-                        
                     </div>
                 </div>
             </div>
         </div>
         
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-        <script src="../static/js/index.js" async defer></script>
+        <script src="https://kit.fontawesome.com/2c47afb381.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js"></script>
     </body>
 </html>

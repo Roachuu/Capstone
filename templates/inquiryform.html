@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css">
+        <link rel="stylesheet" href="/static/css/style.css">
+    </head>
+    <body>
+
+        <!--Background Wave-->
+        <div class="Main-Content-wave">
+            <!--Container-->
+            <div class="container" style="padding: 5rem 0;" >
+                <div class="col s5 offset-s3">
+
+                    <!--Card Panel-->
+                    <div class="card-panel z-depth-3" style="border-radius: 10px;">
+    
+                        <!--Form-->
+                        <form action="post">
+                            
+                            <!--Header Text-->
+                            <div class="row">
+                                <div class="col s12">
+                                    <h4 class="left valign-wrapper highlight">Want to get in touch? Fill out the form below to send us a message and we will get back to you as soon as possible.</h4>
+                                </div>
+                            </div>
+    
+                            <!--Divider-Line-->
+                            <div class="divider"></div>
+    
+                            <!--Input Field-->
+                            <div class="row" style="margin-top: 20px;">
+    
+                                <!--FirstName-->
+                                <div class="col s12 l6">          
+                                    <div class="input-field">
+                                        <i class="fa-solid fa-user prefix"></i>
+                                        <input id="firstname" type="text" class="validate" autocomplete="off">
+                                        <label class="active" for="firstname">First Name</label>
+                                    </div>
+                                </div>
+                                
+                                <!--LastName-->
+                                <div class="col s12 l6">
+                                    <div class="input-field">
+                                        <i class="fa-solid fa-user prefix"></i>
+                                        <input id="lastname" type="text" class="validate" autocomplete="off">
+                                        <label class="active" for="lastname">Last Name</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!--Email Adress-->
+                            <div class="row">
+                                <div class="col s12 l6">          
+                                    <div class="input-field">
+                                        <i class="fa-solid fa-envelope prefix"></i>
+                                        <input id="email" type="email" class="validate" autocomplete="off">
+                                        <label class="active" for="email">Email Address</label>
+                                    </div>
+                                </div>
+                                
+                                <!--Phone Number-->
+                                <div class="col s12 l6">          
+                                    <div class="input-field">
+                                        <i class="fa-solid fa-phone prefix"></i>
+                                        <input id="Phone" type="tel" class="validate" autocomplete="off">
+                                        <label class="active" for="Phone">Phone Number</label>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <!--Message-->
+                            <div class="row">
+                                <div class="col s12 l12">          
+                                    <div class="input-field col s12">
+                                        <i class="fa-solid fa-pen prefix"></i>
+                                        <textarea id="text-area1" class="materialize-textarea" length="120"></textarea>
+                                        <label for="text-area1">Message</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!--Submit-Button-->
+                            <div class="row right-align">
+                                <div class="col l12">
+                                    <button class="btn waves-effect waves-light btn-large" type="submit" name="action">Submit
+                                        <i class="fa-solid fa-paper-plane right"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Logo-->
+        <div class="row indigo darken-4" style="margin: 0;">
+            <div class="col l6 hide-on-med-and-down">
+                <img src="/static/img/logo/logo1.png" class="responsive-img brand-logo left center-align" alt="">
+            </div>
+        </div>
+
+        <script src="https://kit.fontawesome.com/2c47afb381.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js"></script>
+    </body>
+</html>
