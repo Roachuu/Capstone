@@ -7,9 +7,9 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/static/css/style.css">
+        <link rel="stylesheet" href="/static/css/styles.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@materializecss/materialize@1.2.1/dist/css/materialize.css">
-
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
     </head>
     <body>
 
@@ -42,7 +42,7 @@
                                 <div class="col s12 l6">          
                                     <div class="input-field">
                                         <i class="fa-solid fa-user prefix"></i>
-                                        <input id="firstname" type="text" class="validate" autocomplete="off">
+                                        <input id="firstname" type="text" class="validate" autocomplete="off" required>
                                         <label class="active" for="firstname">First Name</label>
                                     </div>
                                 </div>
@@ -51,7 +51,7 @@
                                 <div class="col s12 l6">
                                     <div class="input-field">
                                         <i class="fa-solid fa-user prefix"></i>
-                                        <input id="lastname" type="text" class="validate" autocomplete="off">
+                                        <input id="lastname" type="text" class="validate" autocomplete="off" required>
                                         <label class="active" for="lastname">Last Name</label>
                                     </div>
                                 </div>
@@ -62,7 +62,7 @@
                                 <div class="col s12 l6">          
                                     <div class="input-field">
                                         <i class="fa-solid fa-envelope prefix"></i>
-                                        <input id="email" type="email" class="validate" autocomplete="off">
+                                        <input id="email" type="email" class="validate" autocomplete="off" required>
                                         <label class="active" for="email">Email Address</label>
                                     </div>
                                 </div>
@@ -71,7 +71,7 @@
                                 <div class="col s12 l6">          
                                     <div class="input-field">
                                         <i class="fa-solid fa-phone prefix"></i>
-                                        <input id="Phone" type="tel" class="validate" autocomplete="off">
+                                        <input id="Phone" type="tel" class="validate" autocomplete="off" required>
                                         <label class="active" for="Phone">Phone Number</label>
                                     </div>
                                 </div>
@@ -82,8 +82,8 @@
                                 <div class="col s12 l12">          
                                     <div class="input-field col s12">
                                         <i class="fa-solid fa-pen prefix"></i>
-                                        <textarea id="text-area1" class="materialize-textarea" length="120"></textarea>
-                                        <label for="text-area1">Message</label>
+                                        <textarea id="textarea2" class="materialize-textarea" data-length="120" required></textarea>
+                                        <label for="textarea2">Message</label>
                                     </div>
                                 </div>
                             </div>
@@ -91,7 +91,7 @@
                             <!--Submit-Button-->
                             <div class="row right-align">
                                 <div class="col l12">
-                                    <button class="btn waves-effect waves-light btn-large" type="submit" name="action">Submit
+                                    <button class="btn waves-effect waves-light btn-large indigo" type="submit" name="action">Submit
                                         <i class="fa-solid fa-paper-plane right"></i>
                                     </button>
                                 </div>
@@ -109,7 +109,19 @@
             </div>
         </div>
 
+        
         <script src="https://kit.fontawesome.com/2c47afb381.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/@materializecss/materialize@1.2.1/dist/js/materialize.js"></script>
+
+        <script>
+            $('#textarea1').val('New Text');
+            M.textareaAutoResize($('#textarea1'));
+
+
+            $(document).ready(function() {
+            $('inputinput_text, textarea#textarea2').characterCounter();
+            });
+        </script>
+
     </body>
 </html>
