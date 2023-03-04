@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Result</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/static/css/styles.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@materializecss/materialize@1.2.1/dist/css/materialize.min.css">
+        <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+
+
+        <header>
+            <nav class="pmain">
+                <div class="nav-wrapper indigo darken-3">
+                    <a href="./index.html" class="brand-logo center"><img src="/static/img/login/aclc_logo.png" width="55px" alt="aclclogo"></a>
+                    <a href="#" data-target="slide-out" class="sidenav-trigger" ><i class="medium material-icons">menu</i></a>
+                  <div class="col s12 hide-on-med-and-down">
+                    <a class="breadcrumb" href="index.html"style="margin-left: 10px;">Home</a>
+                    <a class="breadcrumb" href="#">Manage Books</a>
+                    <a class="breadcrumb" >Add Book</a>
+                    <a class="breadcrumb">Result</a>
+                  </div>
+                    
+                </div>
+            </nav>
+             <!--Sidenav-->
+            <div id="sidenav"></div>
+        </header>
+
+
+        <main class="pmain">
+
+
+
+            <!--MainContent-->
+            <div class="container" style="width: 90%;">
+                
+                <!--Submit Button-->
+                <div class="card-panel row right m12" style="padding: 10px; border-radius:5px;">
+
+                    <!--Back-->
+                    <div class="col">
+                        <button class="indigo darken-2 btn btn-medium btn-floating waves-effect waves-light tooltipped" type="submit" name="action" data-position="top" data-tooltip="Go Back" style="border-radius: 5px;">
+                            <i class="material-icons">arrow_back</i>
+                        </button>
+                    </div>
+
+                    <!--Add-->
+                    <div class="col">
+                        <button class="indigo darken-2 btn btn-medium btn-floating waves-effect waves-light tooltipped" type="submit" name="action" data-position="top" data-tooltip="Save & Add" style="border-radius: 5px;">
+                            <i class="material-icons">add</i>
+                        </button>
+                    </div>
+                    
+                    <!--Save and Continue-->
+                    <div class="col">
+                        <button class="indigo darken-2 btn btn-medium btn-floating waves-effect waves-light tooltipped" type="submit" name="action" data-position="top" data-tooltip="Save & Continue Editting" style="border-radius: 5px;">
+                            <i class="material-icons right">arrow_circle_right</i>
+                        </button>
+                    </div>
+                
+                    <!--Save-->
+                    <div class="col">
+                        <button class="indigo darken-2 btn btn-medium btn-floating waves-effect waves-light tooltipped" type="submit" name="action" data-position="top" data-tooltip="It's just save retard" style="border-radius: 5px;">
+                            <i class="material-icons">save</i>
+                        </button>
+                    </div>
+                </div>
+
+                <!--Header-->
+                <div class="row">
+                    <h2 class="indigo-text text-darken-4">Confirm Book</h2>
+                    <p class="indigo-text text-darken-4">Are you sure you want to add this book?</p>
+                    <br>
+                    <h5 class="indigo-text text-darken-4" >Image:</h5>
+
+                    
+                    <!--Form-->
+                    <form action="">
+    
+                        <!--Left-->
+                        <div class="col s12 m4">
+                            
+                            <!--Placeholder-->
+                            <div class="row">
+                                <div class="col s12">
+                                    <img src="http://placehold.it/100x150" width="100%" alt="placeholder img">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Right-->
+                        <div class="col s12 m8">
+                            <div class="row">
+                               <!--Title-->
+                                <div class="input-field col s12 m6">
+                                   <input id="title" type="text" class="validate" autocomplete="off" required>
+                                   <label class="active" for="title">Title</label>
+                                </div>
+                            
+                                <!--ISBN-->
+                                <div class="input-field col s6 m4">
+                                    <input id="isbn" type="text" class="validate" autocomplete="off" required>
+                                    <label for="isbn">ISBN</label>
+                                </div>
+                               
+                            </div>
+        
+                            <div class="row">
+                                <!--Author-->
+                                <div class="input-field col s12 m6">
+                                    <input id="author" type="text" class="validate" autocomplete="off" required>
+                                    <label class="active" for="author">Author</label>
+                                </div>
+                                <!--Publisher-->
+                                <div class="input-field col s12 m6">
+                                    <input id="publisher" type="text" class="validate" autocomplete="off" required>
+                                    <label class="active" for="publisher">Publisher</label>
+                                </div>
+                            </div>
+        
+                            <div class="row">
+
+                                <!--Category-->
+                                <div class="input-field col s6">
+                                    <input id="category" type="text" class="validate" autocomplete="off" required>
+                                    <label class="active" for="category">Category</label>
+                                </div>
+                                
+                                <!--Coppies-->
+                                <div class="input-field col s3">
+                                    <input id="coppies" type="number" class="validate" autocomplete="off" required>
+                                    <label class="active" for="coppies">Coppies</label>
+                                </div>
+                                <!--Total-->
+                                <div class="input-field col s3">
+                                    <input id="total" type="number" class="validate" autocomplete="off" required>
+                                    <label class="active" for="total">Total</label>
+                                </div>
+                            </div>
+        
+                            <!--Description-->
+                            <label>Description</label>
+                            <div class="row" style="margin-bottom: 48px;">
+                                <div class="input-field col s12" >
+                                    <textarea style="padding:12px; border-bottom: 0; border: black 1px solid;" id="bio" type="text" class="materialize-textarea"  required></textarea>
+                                </div>
+                            </div>
+                            
+                            <!-- Floating-Button
+                            <div class="fixed-action-btn">
+                                <a class="btn-floating btn-large tooltipped" type="submit" data-position="left" data-tooltip="Save & Add">
+                                    <i class="material-icons">save</i>
+                                </a>
+                                <ul>
+                                    <li><a class="btn-large btn-floating tooltipped" data-position="left" data-tooltip="Save & Continue"><i class="material-icons right">send</i></a></li>
+                                    <li><a class="btn-large btn-floating tooltipped" data-position="left" data-tooltip="Save & Add"><i class="material-icons">add</i></a></li>
+                                    
+                                </ul>
+                            </div> -->
+    
+                            
+                        </div>
+                    </form>
+    
+                </div>
+            </div>
+        </main>
+
+
+        <script src="https://kit.fontawesome.com/2c47afb381.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@materializecss/materialize@1.2.1/dist/js/materialize.min.js"></script>
+        <script src="/static/js/index.js"></script>
+
+
+        <script>
+            M.AutoInit();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Scan</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/static/css/styles.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@materializecss/materialize@1.2.1/dist/css/materialize.min.css">
+        <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+
+
+        <header>
+            <nav class="pmain">
+                <div class="nav-wrapper indigo darken-3">
+                    <a href="./index.html" class="brand-logo center"><img src="/static/img/login/aclc_logo.png" width="55px" alt="aclclogo"></a>
+                    
+                    <a href="#" data-target="slide-out" class="sidenav-trigger" ><i class="medium material-icons">menu</i></a>
+                    <div class="col s12 hide-on-med-and-down">
+                        <a class="breadcrumb" href="index.html"style="margin-left: 10px;">Home</a>
+                        <a class="breadcrumb" href="#">Manage Books</a>
+                        <a class="breadcrumb" >Add Book</a>
+                    </div>
+                </div>
+            </nav>
+             <!--Sidenav-->
+            <div id="sidenav"></div>
+        </header>
+
+
+        <main class="pmain">
+            <!--MainContent-->
+            <div class="container" style="width: 90%;">
+                
+                
+                <!--Headertext--> 
+                <div class="row">
+                    <h1 class="indigo-text title">Detect</h1>
+                    <p>Type the Title/Isbn to scan the book</p>
+                </div>  
+    
+    
+                <!--Text Input--> 
+                <div class="row">
+                    <div class="input-field col s12 l6 no-padding">
+                        <input id="email" type="email" class="validate" required>
+                        <label class="active" for="email">Title/Isbn</label>
+                    </div>
+                </div>
+    
+                <!-- Detect Button -->
+                <div class="row">
+                    <button class="btn waves-effect waves-light btn-large indigo" type="submit" name="action">Detect</button>
+                </div>
+                
+                <!--Divider-->
+                <div class="divider" style="margin: 24px;"></div>
+    
+                <!--Sub Headertext--> 
+                <div class="row">
+                    <p>or Upload an image </p>
+                </div>  
+    
+                <!-- Choose file -->
+                <div class="row hide-on-small-only">
+                    <div class="file-field col s6">
+                        <div class="card-panel">
+                            <input type="file"><img class="responsive-img"src="https://techli.com/wp-content/uploads/2012/02/piqturdrophere.jpg" alt="placeholder img"> </input>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row hide-on-med-and-up">
+                    <div class="file-field input-field col s12 l6 no no-padding">
+                        <div class="btn indigo">
+                          <span>image</span>
+                          <input type="file" multiple>
+                        </div>
+                        <div class="file-path-wrapper">
+                          <input class="file-path validate" type="text" placeholder="Upload one or more files">
+                        </div>
+                    </div>
+                </div>
+                <!--Detect Button-->
+                <div class="row">
+                    <button class="btn waves-effect waves-light btn-large indigo" type="submit" name="action">Detect</button>
+                </div>                
+            </div>
+        </main> 
+
+        
+
+
+
+        <script src="https://kit.fontawesome.com/2c47afb381.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@materializecss/materialize@1.2.1/dist/js/materialize.min.js"></script>
+        <script src="/static/js/index.js"></script>
+
+
+        <script>
+            M.AutoInit();
+        </script>
+    </body>
+</html>

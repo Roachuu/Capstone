@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<!--WORK IN PROGRESS-->
+
+<html>
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title></title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="/static/css/styles.css">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@materializecss/materialize@1.2.1/dist/css/materialize.css">
+      <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+
+
+      <style>
+        .hidden{
+          display: none;
+        }
+
+        .result:hover .hidden{
+          display: inline-block;
+          color: red;
+        }
+
+      </style>
+
+
+    </head>
+    <body>
+
+      <!--Header-->
+      <div id="top-nav"></div>
+
+
+      <div class="Main-Content-wave" style="justify-content:unset;">
+
+        <div class="container" style="width: 90%; margin-top: 2rem;">
+          <div class="card-panel s12">
+  
+            <!--Filter-Search-->
+            <div class="row">
+              <form action="">
+                
+                <!--Search-->
+                <div class="col s10 m4 card-panel" style="height: 3.5rem; border-radius: 12px;">
+                  <div class="input-field left" style="width: 100%;">
+                    <i class="tiny material-icons fa-solid fa-magnifying-glass prefix" style="font-size: 1rem; line-height: 0.8;"></i>
+                    <input id="search" type="search" class="validate no-padding" style="border-bottom: 0; height: auto; margin-left: 1.5rem;" placeholder="Search">
+                  </div>
+                </div>
+                
+                
+                
+                <ul class="hide-on-small-only">
+
+                  <!--Genre-->
+                  <li class="col m3">
+                    <div class="chips genre" id="genre"></div>
+                  </li>
+
+                  <!--Status-->
+                  <li class="col m3">
+                    <div class="input-field">
+                      <select id="form-select-2" multiple>
+                        <option value="1" selected>All</option>
+                        <option value="2">Available</option>
+                        <option value="3">Not Available</option>
+                      </select>
+                      <label for="form-select-2">Status</label>
+                    </div>
+                  </li>
+
+                  <!--Publish Date-->
+                  <li class="col m2">
+                    <div class="input-field">
+                      <select id="form-select-2" multiple>
+                        <option value="1" selected>All</option>
+                        <option value="2">2020+</option>
+                        <option value="3">2010-2020</option>
+                        <option value="4">2000-2010</option>
+                        <option value="5">1990-2000</option>
+                        <option value="3">1990 below</option>
+                      </select>
+                      <label for="form-select-2">Publish Date</label>
+                    </div>
+                  </li>
+                  
+                </ul>
+              </form>
+            </div>
+
+
+
+            <!--New-Release-->
+            <div class="row" style="margin-bottom: 0px;">
+              <div class="col s12">
+                <h4>New releases<a href="" class="right"><h6>See all</h6></a></h4>
+              </div>
+            </div>
+
+            <div class="divider" style="margin-bottom: 24px;"></div>
+            <div class="row">
+              <div class="col s6 m3 l2">
+                
+                <a href="" class="result">
+                  <img src="https://upload.wikimedia.org/wikipedia/en/2/24/Chainsawman.jpg" class="responsive-img" alt="">
+                  <button class=" btn-floating right btn-small waves-effect waves-light valign-wrapper hidden btn tooltipped" data-position="right" data-tooltip="Add to list" style=" transform: translate(-50%, -150%)"><i class="fa-solid fa-plus" ></i></button>
+                  <h6 class="title">Chainsawman</h6>
+                </a>
+              </div>
+            </div>
+  
+  
+            <!--Popular-->
+            <div class="row" style="margin-bottom: 0px;">
+              <div class="col s12">
+                <h4>Popular<a href="" class="right"><h6>See all</h6></a></h4>
+              </div>
+            </div>
+
+            <div class="divider" style="margin-bottom: 24px;"></div>
+            <div class="row">
+              <div class="col s6 m3 l2" >
+                
+                <a href="" class="result">
+                
+                  <img src="http://books.google.com/books/content?id=EC3uuQAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api" class="responsive-img" alt="" style="min-height: 200px;">
+                  
+                  <button class=" btn-floating right btn-small waves-effect waves-light valign-wrapper hidden btn tooltipped" data-position="right" data-tooltip="Add to list" style=" transform: translate(-50%, -150%)"><i class="fa-solid fa-plus" ></i></button>
+                  <h6 class="title">Chainsawman</h6>
+                </a>
+
+                
+              </div>
+              <div class="row">
+                <a href="" class="result">
+                  <img src="http://books.google.com/books/content?id=2wqEtgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api" class="responsive-img" alt="" style="min-height: 200px;">
+                  <button class=" btn-floating right btn-small waves-effect waves-light valign-wrapper hidden btn tooltipped" data-position="right" data-tooltip="Add to list" style=" transform: translate(-50%, -150%)"><i class="fa-solid fa-plus" ></i></button>
+                  <h6 class="title">Chainsawman</h6>
+                </a>
+              </div>
+            </div>
+  
+            
+            <!---BrowseBooks-->
+            <div class="row" style="margin-bottom: 0px;">
+              <div class="col s12">
+                <h4>Browse<a href="" class="right"><h6>See all</h6></a></h4>
+              </div>
+            </div>
+
+            <div class="divider" style="margin-bottom: 24px;"></div>
+            <div class="row">
+              <div class="col s6 m3 l2">
+                
+                <a href="" class="result">
+                  <img src="https://upload.wikimedia.org/wikipedia/en/2/24/Chainsawman.jpg" class="responsive-img" alt="">
+                  <button class=" btn-floating right btn-small waves-effect waves-light valign-wrapper hidden btn tooltipped" data-position="right" data-tooltip="Add to list" style=" transform: translate(-50%, -150%)"><i class="fa-solid fa-plus" ></i></button>
+                  <h6 class="title">Chainsawman</h6>
+                </a>
+              </div>
+            </div>
+
+
+
+
+          </div>
+          
+
+
+
+
+          </div>
+  
+  
+  
+  
+        </div>
+      </div>
+
+
+
+      <!--Footer-->
+      <div id="footer"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <script src="https://kit.fontawesome.com/2c47afb381.js" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@materializecss/materialize@1.2.1/dist/js/materialize.js"></script>
+      <script src="/static/js/index.js"></script>
+      <script>
+
+
+        $(document).ready(function(){
+
+          $('.genre').chips({
+            placeholder: 'Enter a genre',
+            secondaryPlaceholder: '+tag',
+            autocompleteOptions: {
+              data: {
+                'Action': null,
+                'Adventure': null,
+                'Ayoko na mabuhay': null
+              },
+              limit: Infinity,
+              minLength: 1
+            },
+
+            
+            
+            onChipSelect:() =>{
+              $('#filterchips').addChip({
+                tag: 'Baliw'
+
+              })
+            }
+          })
+          
+        });
+          
+        $(document).ready(function(){
+        $('select').formSelect({
+        });
+        });
+
+        $(document).ready(function(){
+        $('.tooltipped').tooltip({
+       
+        });
+        });
+        
+
+      </script>  
+    </body>
+</html>

@@ -1,0 +1,94 @@
+<style>
+    .hidden{
+        display: none;
+    }
+
+    .result:hover .hidden{
+        display: block;
+
+    }
+
+    .shadow0{
+        background-color:rgba(0, 0, 0, 0) !important;
+        box-shadow:none !important;
+    }
+
+    .text2{
+        text-decoration: none; 
+        color: black; 
+        font-size: 12px;
+    }
+</style>
+
+
+<!-- Modal Trigger -->
+<a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+
+
+
+<!-- Modal Structure -->
+<div id="modal1" class="modal shadow0" style="width: 100%;  max-height: 100%;">
+        
+    <div class="modal-content">
+      
+        <a href="#!" class="modal-close btn-floating suffix right shadow0"><i class="fa-solid fa-x"></i></a>
+        <!--Quick Search-->
+        <div class="container">
+            <div class="row" >
+                <div class="col s12 card-panel"  style="border-radius: 10px;">
+                    <div class="input-field">
+                        <i class="tiny material-icons fa-solid fa-magnifying-glass prefix" style="font-size: 1rem; line-height: 0.8;"></i>
+                        <input id="search" type="search" class="validate" style="border-bottom: 0; height: auto; margin-left: 2rem;" placeholder="Search">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Results-->
+        <div class="row">
+            
+            <div class="col s12 m6 l6">
+                <div class="card-panel no-padding">
+                    <h5 class="center indigo-text text-darken-4">Books</h5>
+                    <ul class="collection">
+                        <a href="#!" class="collection-item avatar result">
+                            <button class="btn-floating btn-small waves-effect waves-light indigo right valign-wrapper hidden btn tooltipped" data-position="right" data-tooltip="Add to list"><i class="fa-solid fa-plus" style="width: 25px; height: 25px;"></i></button>
+                            <img src="https://upload.wikimedia.org/wikipedia/en/2/24/Chainsawman.jpg" class="circle" style="border-radius: 0; height: 53px;" alt="">
+                            <span class="title" style="font-size: 30px;">Chainsawman</span>
+                            <p class="flow-text truncate text2" >Tatsuki Fujimoto</p>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col s12 m6 l6">
+                <div class="card-panel no-padding">
+                    <h5 class="center indigo-text text-darken-4">Author</h5>
+                    <ul class="collection">
+                        <a href="#!" class="collection-item avatar valign-wrapper">
+                            <img src="https://cdn.myanimelist.net/images/voiceactors/2/61876.jpg" class="circle responsive-img" alt="">
+                            <span class="title" style="font-size: 20px;">Tatsuki Fujimoto</span>
+                            <p class="flow-text truncate text2">Tatsuki Fujimoto is a Japanese manga artist, known for his works Fire Punch and Chainsaw Man. lore</p>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function(){
+    $('.modal').modal({
+      endingTop: '0%'
+    });
+    });
+    
+    $(document).ready(function(){
+    $('.tooltipped').tooltip({
+      // specify options here
+    });
+  });
+</script>   

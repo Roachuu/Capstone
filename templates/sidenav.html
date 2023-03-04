@@ -1,0 +1,60 @@
+<ul id="slide-out" class="sidenav sidenav-fixed">
+
+    <li><div class="user-view">
+        <div class="background">
+        <img src="https://img.freepik.com/free-vector/paper-style-gradient-blue-wavy-background_23-2149121741.jpg" width="100%">
+        </div>
+
+        <a href="./profile.html"><img class="circle" src="https://i1.sndcdn.com/artworks-TM4GYJSyy8bwoiI5-DIQjTw-t500x500.jpg">
+        <span class="white-text name">jdoe@example.com</span>
+        <span class="white-text">Member</span></a>
+    </div></li>
+
+    <li><a href="./index.html">Home<i class="material-icons left prefix iconmr3">home</i></a></li>
+    <li><a href="./library.html">Library<i class="material-icons left prefix iconmr3">library_books</i></a></li>
+    <li><div class="divider"></div></li>
+    <ul class="collapsible">
+        <li class="active">
+            <div class="collapsible-header sidep8"><i class="material-icons prefix iconmr3">person</i>Profile<i class="material-icons right">arrow_drop_down</i></div>
+            <ul class="collapsible-body">
+                <li><a class="waves-effect" href="#!"><i class="material-icons prefix iconmr3">bookmarks</i>Bookmarks</a></li>
+                <li><a class="waves-effect" href="#!"><i class="material-icons prefix iconmr3">edit_calendar</i>Reservation</a></li>
+            </ul>
+        </li>
+    </ul>
+    <li><div class="divider"></div></li>
+    <ul class="collapsible">
+        <li class="active">
+            <div class="collapsible-header sidep8" ><i class="material-icons prefix iconmr3" >dashboard</i>Manage<i class="material-icons right">arrow_drop_down</i></div>
+            <ul class="collapsible-body">
+                <li><a class="waves-effect" href="#"><i class="material-icons prefix iconmr3" >my_library_books</i>Books</a></li>
+                <li><a class="waves-effect" href="#"><i class="material-icons prefix iconmr3" >people</i>Members</a></li>
+                <li><a class="waves-effect" href="#"><i class="material-icons prefix iconmr3" >calendar_month</i>Pending Reservations</a></li>
+            </ul>
+        </li>
+    </ul>
+    <li><div class="divider"></div></li>
+    <li><a href="#">Settings<i class="material-icons left prefix iconmr3" >settings</i></a></li>
+</ul>
+
+<style>
+    .iconmr3{
+    margin-right: 3px !important;
+    }
+
+    .sidep8{
+        padding: 0 8px !important;
+    }
+</style>
+
+<script>
+    $(document).ready(function(){
+        $('.sidenav').sidenav();
+    });
+
+    $(document).ready(function(){
+        $('.collapsible').collapsible({
+             // specify options here
+        });
+    });
+  </script>
