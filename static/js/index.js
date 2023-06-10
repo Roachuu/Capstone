@@ -18,6 +18,17 @@ $(document).ready(function(){
   $('.parallax').parallax();
 });
 
+$(document).ready(function(){
+  $('.carousel').carousel({
+    'shift': 1,
+    'fullWidth': true,
+    'indicators': true,
+    'noWrap': true,
+  });
+});
+
+
+
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       console.log(entry)

@@ -23,8 +23,6 @@
 .cardheader{
 
     pointer-events: none;
-
-
     position: absolute;
     top: 0;
     left: 100%;
@@ -51,6 +49,14 @@
     display: block;
     object-fit: contain;
     object-position: center;
+}
+
+.resultstat{
+    position: absolute; 
+    top: -1%; 
+    left: -1%;  
+    width: 6%; 
+    height: 4%;
 }
 
 .fav{

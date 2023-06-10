@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.2.2/css/materialize.min.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <title>Edit_Profile</title>
+</head>
+
+<body style="min-height: 100%; margin: 0; padding: 0; background-color: #fff3e0;">
+    <div class="navbar-fixed">
+        <nav class="nav-wrapper indigo darken-4">
+            <div class="container">
+                <img src="aclc_logo.png" class="brand-logo center" class="responsive-img"
+                    style="height: 10vh; padding-top: 6px; padding-bottom: 6px;">
+                <a style="font-weight: bold; font-size: 30px;">Profile</a>
+                <ul class="right">
+                    <a class="waves-effect waves-light btn-flat indigo darken-4 white-text"
+                        style="font-weight: bold;"><i class="material-icons right">logout</i>logout</a>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div id="index-banner" class="parallax-container" style="height: auto; width: 100%;">
+        <div class="parallax" style=" width: 100%;
+        background-image: url(loginphoto1.jpg);
+        max-height: 250px; background-attachment: fixed; background-position: center; background-repeat: no-repeat;
+        background-size: cover; filter: brightness(50%);"></div>
+        
+        <div class="container">
+            <div class="row">
+                <div class="card-panel col s10 m4 l4 offset-s1 z-depth-2"
+                    style=" margin-top: 40px; padding: 20px 20px 50px 20px; border-radius: 10px;">
+                    <div class="center-align">
+                        <img class="responsive-img" src="Profile.png" style="height: 20vh;">
+                        <p class="flow-text" style="font-size: 15px;">
+                            JPG or PNG not larger than 2 MB
+                        </p>
+                        <hr />
+                        <form action="#">
+                            <div class="file-field input-field">
+                                <button class="waves-effect waves-light indigo darken-4" style="
+                           padding: 10px; border: 0; border-radius: 15px;">
+                                    <a href="#" style="color: white">Upload New Image</a>
+                                    <input type="file" multiple />
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- USER INFO -->
+                <div class="card-panel col s10 m6 l7 offset-s1 push-m1 push-l1 z-depth-2"
+                    style="margin-top: 40px; border-radius: 10px;">
+                    <p class="indigo-text flow-text" style="font-weight: bold; margin-bottom: 0; margin-left:30px;">
+                        Edit User Info
+                    </p>
+                    <hr />
+                    <div class="container">
+                        <div class="row">
+                            <form action="">
+                                <div class="valign-wrapper">
+                                    <p class="col s4 m12 l4" style="font-weight: bold;margin-left: 0%;">Full Name</p>
+                                    <input class="col s8 m12" id="out1" type="Full Name" placeholder="Enter full name"
+                                        id="full_name" class="validate"
+                                        style="padding: 7px; margin-top: 20px; border: 2px solid black; border-radius: 5px;width: 100%;">
+                                </div>
+                                <div class="valign-wrapper">
+                                    <p class="col s4 m12 l4" style="font-weight: bold;">Email</p>
+                                    <input class="col s8 m12" id="out2" type="email_add"
+                                        placeholder="Enter email address" id="email" class="validate"
+                                        style="padding: 7px; margin-top: 20px; border: 2px solid black; border-radius: 5px;width: 100%;">
+                                </div>
+                                <div class="valign-wrapper">
+                                    <p class="col s4 m12 l4" style="font-weight: bold;">USN</p>
+                                    <p class="col s8 m12" id="out3"
+                                        style="padding: 5px; border: 2px solid black;margin-top: 20px;   border-radius: 5px;width: 100%;"">
+                                        123456789101</p>
+                                </div>
+                                <div class=" valign-wrapper">
+                                    <p class="col s4 m12 l4" id="usn" style="font-weight: bold;">Role</p>
+                                    <label for="Role"></label>
+                                    <select id="Role" class="browser-default col s8 m12"
+                                        style="margin-top: 15px; padding: 5px; border: 2px solid black;margin-top: 20px;  border-radius: 5px;width: 100%;">
+
+                                        <option value="1" selected>Member</option>
+                                        <option value="2">Librarian</option>
+                                        <option value="3">Admin</option>
+                                    </select>
+                                </div>
+                                <button class="waves-effect waves-light col s5 m10 l5 offset-s2 offset-l3" style="
+                                        background-color: #1a237e; border-radius: 15px; border: 0; padding: 10px;
+                                        margin-top: 70px; margin-bottom: 20px;">
+
+                                    <a href="Profile_Page.html" style="color: white; padding: 10px">Save Changes</a>
+                                </button>
+                                <button class="waves-effect col s3 m10 l3 offset-s1 offset-m1 offset-l1" style="
+                                        background-color: white; border-radius: 15px; padding: 10px;
+                                        margin-top: 70px; margin-bottom: 20px;">
+
+                                    <a href="Profile_Page.html" style="color: black; padding: 10px">Cancel</a>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+</body>
+
+</html>

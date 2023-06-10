@@ -1,14 +1,99 @@
+<style>
+  .profile-dropdown{
+    font-size: 12px !important;
+    color: grey !important;
+    margin: 0 10px !important;
+  }
+
+  .profile-dropdown:hover{
+    background-color: rgba(0, 0, 0, 0) !important;
+    color: black !important;
+  }
+
+  .profile-dropdown i{
+    margin-right: 8px !important;
+  }
+
+
+  
+
+  
+</style>
+
+
+
 <header>
-  <nav>
-    <div class="navbar-fixed">    
+
+
+  <div class="navbar-fixed">
+    
+    <nav>
+      <div class="nav-wrapper indigo darken-4">   
+        <a href="index.html" class="brand-logo hide-on-small-and-down left" style="margin-left: 4.5rem;" ><img src="/static/img/logo/logo2.png" height="62px" alt=""></a>
+        <a href="" data-target="slide-out" class="sidenav-trigger hide-on-med-and-up"><i class="material-icons">menu</i></a> 
+        <a href="index.html" class="brand-logo hide-on-med-and-up" ><img src="/static/img/logo/logo2.png" class="brand-logo center" height="55px" alt=""></a>
         
-    </div>
-  </nav>
+        <ul class="hide-on-small-only" style="margin-left: 15rem;">
+          <li><a href="./index.html">Home<i class="material-icons left">home</i></a></li>
+          <li><a href="./library.html">Library<i class="material-icons left">menu_book</i></a></li>
+        </ul>
+
+        <!--Right Icons-->
+        <ul class="hide-on-small-and-down right center" style="margin-right: 4.5rem;">
+          <li><a class="modal-trigger navtool" data-position="bottom" data-tooltip="Search" href="#modal1"><i class="material-icons">search</i></a></li>
+          <li><a href="#!" class="navtool" data-position="bottom" data-tooltip="Dashboard"><i class="material-icons">view_module</i></a></li>
+          <li><a class="navtool" data-position="bottom" data-tooltip="Notification"><i class="material-icons">notifications_none</i></a></li>
+          <li><div class="profiledropdown-trigger" data-target='dropdown1'><img class="" width="36px" style="transform: translateY(+35%)" src="https://i1.sndcdn.com/artworks-TM4GYJSyy8bwoiI5-DIQjTw-t500x500.jpg"><i class="material-icons right" style="margin-left: 0;">arrow_drop_down</i></div></li>
+        </ul>
+
+
+        <!-- Dropdown Profile -->
+        <ul id='dropdown1' class='dropdown-content'>
+          <li><a class="profile-dropdown" href="./profile.html">Profile<i class="material-icons left">person</i></a></li>
+          <li><a class="profile-dropdown" href="./notifaction.html">Notification<i class="material-icons left">notifications</i></a></li>
+          <li><a class="profile-dropdown" href="#!">Settings<i class="material-icons left">settings</i></a></li>
+          <li class="divider" tabindex="-1"></li>
+          <li><a class="profile-dropdown">Logout<i class="material-icons right">logout</i></a></li>
+        
+        </ul>
+
+      </div>
+    </nav>
+  </div>
     
   
-    <ul id="slide-out" class="sidenav">
-          <li><a href="{% url 'accounts:login' %}">Login</a></li>
-          <li><a href="{% url 'inquiry' %}">About Us</a></li>
-          <li><a href="{% url 'inquiry' %}">Contact</a></li>   
-    </ul>
+
   </header>
+
+
+
+
+
+  <script>
+  $(document).ready(function(){
+    $('.sidenav').sidenav({
+      // specify options here
+    });
+  });
+
+
+  $(document).ready(function(){
+    $('.navtool').tooltip({
+      'transitionMovement' : null,
+      'exitDelay': null,
+      'opacity' : 0.9,
+      'margin': 0,
+    });
+  });
+
+  $(document).ready(function(){
+    $('.profiledropdown-trigger').dropdown({
+      
+      'coverTrigger': false,
+      'constrainWidth': false,
+      'hover': true
+    });
+  });
+
+
+  </script>

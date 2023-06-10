@@ -3,10 +3,6 @@
         display: none;
     }
 
-    .result:hover .hidden{
-        display: block;
-
-    }
 
     .shadow0{
         background-color:rgba(0, 0, 0, 0) !important;
@@ -21,8 +17,6 @@
 </style>
 
 
-<!-- Modal Trigger -->
-<a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
 
 
 
@@ -51,7 +45,7 @@
                 <div class="card-panel no-padding">
                     <h5 class="center indigo-text text-darken-4">Books</h5>
                     <ul class="collection">
-                        <a href="#!" class="collection-item avatar result">
+                        <a href="#!" class="collection-item avatar">
                             <button class="btn-floating btn-small waves-effect waves-light indigo right valign-wrapper hidden btn tooltipped" data-position="right" data-tooltip="Add to list"><i class="fa-solid fa-plus" style="width: 25px; height: 25px;"></i></button>
                             <img src="https://upload.wikimedia.org/wikipedia/en/2/24/Chainsawman.jpg" class="circle" style="border-radius: 0; height: 53px;" alt="">
                             <span class="title" style="font-size: 30px;">Chainsawman</span>
@@ -86,9 +80,4 @@
     });
     });
     
-    $(document).ready(function(){
-    $('.tooltipped').tooltip({
-      // specify options here
-    });
-  });
 </script>   

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@materializecss/materialize@1.2.2/dist/css/materialize.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+
+    <style>
+      .hidden{
+        display: none;
+      }
+      
+      .hover:hover .hidden{
+        display: block;
+        opacity: 1;
+        
+      }
+
+    
+    </style>
+
+  </head>
+
+  <body class="orange lighten-5">
+
+    <header>
+      <nav class="pmain">
+          <div class="nav-wrapper indigo darken-3">
+              <a href="./index.html" class="brand-logo center"><img src="/static/img/login/aclc_logo.png" width="55px" alt="aclclogo"></a>
+              
+              <a href="#" data-target="slide-out" class="sidenav-trigger" ><i class="medium material-icons">menu</i></a>
+              <div class="col s12 hide-on-med-and-down">
+                  <a class="breadcrumb" href="index.html"style="margin-left: 10px;">Home</a>
+                  <a class="breadcrumb" href="profile.html">Profile</a>
+                  <a class="breadcrumb" >Notification</a>
+              </div>
+          </div>
+      </nav>
+      <!--Sidenav-->
+      <div id="sidenav"></div>
+    </header>
+    
+    <div class="pmain">
+      
+      <!--Maincontent-->
+      <div class="row">
+
+        <!--Content Left-->
+        <div class="col s12 m8 left">
+          <ul class="collection">
+
+            <li class="collection-item avatar">
+              <a href="#">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Joe_Biden_presidential_portrait.jpg/640px-Joe_Biden_presidential_portrait.jpg" alt="" class="circle">
+              </a>
+              <a href="#" class="title">Joe Biden has Followed you.</a>
+              <p>1 hour ago<br>
+                 Second Line
+              </p>
+              <a href="#!" class="secondary-content"><i class="material-icons">more_vert</i></a>
+            </li>
+
+            <li class="collection-item avatar">
+              <a href="#">
+                <img src="https://bandlabimages.azureedge.net/v1.0/users/81079a4f-051c-4157-b9ff-4512e61e2f73/640x640" alt="" class="circle">
+              </a>
+              <a href="" class="title">The Rizzler has followed you.</a>
+              <p>just now. <br>
+                 Second Line
+              </p>
+              <a href="#!" class="secondary-content"><i class="material-icons">more_vert</i></a>
+            </li>
+
+            <li class="collection-item avatar">
+              <a href="#">
+                <img src="https://pbs.twimg.com/media/Fj1CLU2XwAEOA9c?format=jpg&name=large" alt="" class="circle">
+              </a>
+              <a href="" class="title">The Art of Rizz arrived</a>
+              <p>First Line <br>
+                 Second Line
+              </p>
+              <a href="#!" class="secondary-content"><i class="material-icons">more_vert</i></a>
+            </li>
+
+            <li class="collection-item avatar">
+              <a href="#">
+                <img src="https://play-lh.googleusercontent.com/LByrur1mTmPeNr0ljI-uAUcct1rzmTve5Esau1SwoAzjBXQUby6uHIfHbF9TAT51mgHm" alt="" class="circle">
+              </a>
+              <a href="" class="title">Clash of clans</a>
+              <p>your village is being raided by obama! <br>
+                
+              </p>
+              <p class="grey-text">just now</p>
+              <a href="#!" class="secondary-content"><i class="material-icons">more_vert</i></a>
+            </li>
+
+            <li class="collection-item avatar">
+              <a href="#">
+                <img src="https://cdn.discordapp.com/attachments/425283312941137920/1117105332179705917/TjWDruGE_400x400.jpg" alt="" class="circle">
+              </a>
+              <a href="" class="title">Adolf Hitler started following you!</a>
+              <p>Ein Volk, Ein Reich, Ein Führer!<br>
+                
+              </p>
+              <p class="grey-text">just now</p>
+              <a href="#!" class="secondary-content"><i class="material-icons">more_vert</i></a>
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <!--Filter Right-->
+        <div class="col s12 m4 right">
+          
+          
+          <!--Filter-->
+          <div class="row">
+            <div class="card-panel collection">
+              <div class="row">
+            
+                <h6 class="title grey-text">Notification<a href="#!" class="right grey-text"><i style="font-size: 1.5rem;" class="material-icons">settings</i></a></h6>
+                
+                
+              </div>
+              
+              <a href="#!" class="collection-item indigo darken-4 active">All</a>
+              <a href="#!" class="collection-item grey-text">Follows</a>
+              <a href="#!" class="collection-item grey-text">Activity</a>
+              <a href="#!" class="collection-item grey-text">Alerts</a>
+            </div>
+          </div>
+        </div>
+
+        
+
+
+
+
+      </div>
+
+
+
+    </div>
+    
+    
+
+
+      
+      
+    <script src="https://kit.fontawesome.com/2c47afb381.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@materializecss/materialize@1.2.2/dist/js/materialize.min.js"></script>
+    <script src="/static/js/index.js"></script>
+
+    <script>
+       $(document).ready(function(){
+    $('.tooltipped').tooltip({
+      // specify options here
+    });
+    });
+    </script>
+  </body>
+</html>
