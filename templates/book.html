@@ -22,6 +22,20 @@
                 width: 150px !important;
                 height: 200px !important;
             }
+
+            .pushup{
+                margin-top: 1rem;
+            }
+        }
+
+        @media screen and (min-width: 600px) {
+            .pushup{
+                transform: translateY(-30%);
+            }
+
+            .pushdown{
+                transform: translateY(120%);
+            }
         }
     </style>
 
@@ -31,6 +45,141 @@
  
 
     <body class="orange lighten-5">
+
+        <!-- Modal Structure -->
+        <div id="agreement" class="modal">
+            <div class="modal-content">
+                <h4>User Agreement</h4>
+                <textarea style="min-height: 20rem; min-width: 100%;">
+User Agreement for Book Reservation in Online Library Management System
+
+    1. Book Reservation
+
+        1.1. The User may reserve a book through the Library's online management system.
+
+        1.2. The reservation will be confirmed upon availability of the requested book.
+
+        1.3. The Library reserves the right to limit the number of books that can be reserved by a User
+        at any given time.
+
+    2. Book Collection
+
+        2.1. The User is responsible for collecting the reserved book from the Library within two (2) 
+        days of receiving the notification of availability.
+
+        2.2. Failure to collect the reserved book within the specified time frame may result in the 
+        cancellation of the reservation.
+                    
+    3. Book Return
+
+        3.1. The User agrees to return the reserved book to the Library within the specified due date, 
+        as indicated at the time of reservation.
+
+        3.2. In the event the User fails to return the book within the due date, the User will be subject 
+        to fines and penalties as determined by the Library.
+                    
+    4. Loss or Damage to Reserved Book
+
+        4.1. The User assumes full responsibility for the reserved book and agrees to return it in the same 
+        condition as when borrowed.
+
+        4.2. In the event of loss, theft, or damage to the reserved book while in the User's possession, the 
+        User will be responsible for reimbursing the Library for the cost of the book or the cost of repairs,
+        as determined by the Library.
+                    
+    5. User Responsibilities
+
+        5.1. The User agrees to provide accurate and up-to-date information when making a reservation, 
+        including contact information and any other required details.
+
+        5.2. The User is responsible for ensuring that all reserved books are returned on time and in good 
+        condition.
+                    
+    6. Termination or Suspension
+
+        6.1. The Library reserves the right to terminate or suspend the User's access to the online management
+        system and the reservation services in case of violation of this Agreement or any other Library policies.
+                    
+    7. Limitation of Liability
+
+        7.1. The Library shall not be held liable for any loss, damage, or inconvenience caused to the User as a 
+        result of reserving or borrowing books through the online management system.
+
+        7.2. The Library shall not be responsible for any delay or failure in the availability of reserved books 
+        due to circumstances beyond its reasonable control.
+                    
+    8. Amendments
+
+        8.1. The Library reserves the right to amend or modify this Agreement at any time. Notice of any 
+        changes will be provided to the User through the online management system or other appropriate 
+        means.
+    
+By reserving a book through the Library's online management system, the User acknowledges that they have read, understood, and agreed to the terms and conditions outlined in this Agreement.
+                </textarea>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect btn-flat">Disagree</a>
+              <a href="#!" class="modal-close waves-effect btn-flat">Agree</a>
+            </div>
+         </div>
+
+
+        <!--BORROW FORMN-->
+        <div id="borrow" class="modal" style="width: 60%; height: auto; max-height: 80%;">
+            <div class="modal-content">
+
+                <div class="row white" style="padding: 1rem;">
+                    <h4>Borrow Form</h4>
+
+                    <div class="divider" style="margin-bottom: 2rem;"></div>
+                    <div class="input-field col s12">
+                        <input disabled value="Book" id="disabled" type="text" class="validate">
+                        <label for="disabled">Bookname</label>
+                    </div>
+                    <div class="input-field col s12 m6">
+                        <input disabled value="Name" id="disabled" type="text" class="validate">
+                        <label for="disabled">Name</label>
+                    </div>
+                    <div class="input-field col s12 m6">
+                        <input disabled value="USN" id="" type="text" class="validate">
+                        <label for="disabled">USN</label>
+                    </div>
+                    <div class="input-field col s12 m6">
+                        <input disabled value="Email" id="Email" type="text" class="validate">
+                        <label for="disabled">Email</label>
+                    </div>
+                    <div class="input-field col s12 m6">
+                        <input value="Name" id="name" type="text" class="validate" required>
+                        <label for="disabled">idk what to put here</label>
+                    </div>
+                </div>
+                <div class="divider"></div>
+            
+                <div class="model-footer white" style="padding: 1rem;">
+
+                    <div class="row">
+                        <div class="col s12 m6">
+                            <div class="input-field">
+                                <input type="text" id="datepicker" class="datepicker"  required>
+                                <label for="datepicker">Select a date</label>
+                            </div>
+                        </div>
+                        <div class="right-align col s12 m6" style="margin-top: 1.5rem;">
+                            <a class="btn-large waves-effect waves-light modal-trigger" href="#agreement">Submit
+                                <i class="material-icons right">send</i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="row">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
         
 
         <!--Header-->
@@ -41,16 +190,16 @@
         <div class="main">
             
             <!--PARALLAX-->
-            <div class="parallax-container" style="height: 200px;">
+            <div class="parallax-container hide-on-small-and-down" style="height: 200px;">
                 <div class="parallax" >
                     <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80" alt="">
                 </div>
             </div>
             
-            <div class="container">
+            <div class="container pushup">
                 <div class="row">
                     <!--Left Side-->
-                    <div class="col s6 m4 l3" style="transform: translateY(-30%);">
+                    <div class="col s6 m4 l3">
 
                         <!--Book image-->
                         <div class="row">
@@ -60,29 +209,31 @@
 
                         <!--Buttons-->
                         <div class="row z-depth-2" style="border-radius: 5px;">
-                            <!--Borrow-->
+                            <!--Borrow Modal-->
                             <div class="col s9 no-padding">
-                                <button class="btn waves-effect waves-light z-depth-0 blue" type="borrow" name="action" style="width: 100%; border-radius: 5px 0 0 5px;">Borrow</button>
+                                <a class="btn waves-effect waves-light z-depth-0 blue modal-trigger" href="#borrow" style="width: 100%; border-radius: 5px 0 0 5px;">Borrow</a>
                             </div>
                             <!--Add to List-->
                             <div class="col s3 no-padding">
                                 <button class="btn waves-effect waves-light z-depth-0 red lighten-1" type="Add" name="action" style="width: 100%; border-radius: 0 5px 5px 0;"><i class="material-icons">favorite_outline</i></button>
                             </div>
-                            
-                            
 
+                            
+                            
                         </div>
-
                     </div>
 
                     <!--Right-->
-                    <div class="col s6 m8 l9">
-                        <h4>THE RIZZ COLLECTION SERIES 5 of 2000</h5>
-                        <h5>by yours truly</h5>
+                    <div class="col s12 m8 l9 pushdown" >
+                        <h4 class="indigo-text" style="text-shadow: 2px 2px 2px white;"><b>THE RIZZ COLLECTION SERIES 5 of 2000</b></h5>
+                        <h5><b>by yours truly</b></h5>
                         <div class="divider"></div>
-
-                        <p>
-                            Rizz is a slang term for skill in charming or seducing a potential romantic partner, especially through verbal communication. It is most commonly applied in the context of men pursuing women, but not always.
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <h6>
+                        Rizz is a slang term for skill in charming or seducing a potential romantic partner, especially through verbal communication. It is most commonly applied in the context of men pursuing women, but not always.
 
 It is typically used in the exact same way as the older slang term game.
 
@@ -93,8 +244,7 @@ The related term unspoken rizz refers to the ability to exude charm or charisma 
 Rizz is also used as a verb, often in the form rizz up, meaning to charm someone.
 
 Example: I’m about to rizz up Sarah. Do you know if she has a boyfriend?
-                        </p>
-                    </div>
+                    </h6>
                 </div>
             </div>
     
@@ -119,6 +269,23 @@ Example: I’m about to rizz up Sarah. Do you know if she has a boyfriend?
             // specify options here
             });
             });
+
+            $(document).ready(function(){
+            $('.modal').modal({
+                
+            });
+            });
+            
+            var dateToday = new Date();
+
+            $(document).ready(function(){
+            $('.datepicker').datepicker({
+            'disableWeekends': true,
+            'minDate': dateToday,
+
+            });
+            });
+
         </script>
     </body>
 </html>
