@@ -13,6 +13,43 @@
     <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
   
     <style>
+
+
+            .img{
+            background-image: 
+            linear-gradient(to bottom, rgba(255, 204, 128, 0.7), rgba(26, 34, 126)),
+            url(/static/img/index/bookback.jpg);
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            z-index: 1;
+            }
+
+            .overlay-upper{
+                background-color: rgba(255, 224, 178, 0) !important;
+            }
+            
+            .overlay{
+                background-color: rgba(255, 224, 178, 0) !important;
+                background-image: linear-gradient(to bottom, rgba(255, 204, 128, 0), rgba(26, 34, 126, 0.3))
+            }
+            
+            
+
+        .separator::before{
+            content: ""; display:block;
+            width: 100%; height:100px;
+            transform: skewY(-2deg);
+            background-color: #fff3e0 ;
+            background-image: linear-gradient(to bottom, rgba(255, 243, 224, 1), rgba(255, 220, 178, 0.3));
+            position: relative; top: 0; left: 0;
+            transform-origin: left;
+            z-index: 1;
+        }
+        
+        
+           
+            
         @media (max-width: 600px){
             .bookcontainer{
                 margin-bottom: 150px;
@@ -34,7 +71,7 @@
             }
 
             .pushdown{
-                transform: translateY(120%);
+                transform: translateY(110%);
             }
         }
     </style>
@@ -221,43 +258,44 @@ By reserving a book through the Library's online management system, the User ack
                             
                             
                         </div>
+
+                        
                     </div>
 
                     <!--Right-->
                     <div class="col s12 m8 l9 pushdown" >
                         <h4 class="indigo-text" style="text-shadow: 2px 2px 2px white;"><b>THE RIZZ COLLECTION SERIES 5 of 2000</b></h5>
                         <h5><b>by yours truly</b></h5>
-                        <div class="divider"></div>
+                        <p>Category:</p>
+                        
                     </div>
                 </div>
                 
                 <div class="row">
-                    <h6>
-                        Rizz is a slang term for skill in charming or seducing a potential romantic partner, especially through verbal communication. It is most commonly applied in the context of men pursuing women, but not always.
+                    <div class="divider" style="margin-bottom: 1rem; width: 100%; height: 0.1rem; background-color: black;"></div>
+                    <p>Rizz is a slang term for skill in charming or seducing a potential romantic partner, especially through verbal communication. It is most commonly applied in the context of men pursuing women, but not always. It is typically used in the exact same way as the older slang term game. Example: Dan’s not that good looking, but he’s got serious rizz—look at him charming those two models! The related term unspoken rizz refers to the ability to exude charm or charisma without verbal communication, such as with general confidence and body language. Rizz is also used as a verb, often in the form rizz up, meaning to charm someone. Example: I’m about to rizz up Sarah. Do you know if she has a boyfriend?</p>
+                </div>
 
-It is typically used in the exact same way as the older slang term game.
-
-Example: Dan’s not that good looking, but he’s got serious rizz—look at him charming those two models! 
-
-The related term unspoken rizz refers to the ability to exude charm or charisma without verbal communication, such as with general confidence and body language.
-
-Rizz is also used as a verb, often in the form rizz up, meaning to charm someone.
-
-Example: I’m about to rizz up Sarah. Do you know if she has a boyfriend?
-                    </h6>
+                <div class="row right">
+                    <h6>Publushed by: </h6>
                 </div>
             </div>
-    
+
+
+
+            <div class="img">
+                <div class="separator transparent">
+                    
+                   
+                    <div id="footer" class="overlay"></div>
+                    
+                </div>
             </div>
         </div>
-
+   
         
-
-
-        </div>
-
-        <div id="footer"></div>
-
+        
+        
 
         <!-- JQUERY FOR THE SIDENAV TO WORK  -->
         <script src="https://kit.fontawesome.com/2c47afb381.js" crossorigin="anonymous"></script>
