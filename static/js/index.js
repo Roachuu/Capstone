@@ -27,7 +27,17 @@ $(document).ready(function(){
   });
 });
 
+$(document).ready(function(){
 
+  $('.genre').chips({
+  })
+  
+});
+  
+$(document).ready(function(){
+$('select').formSelect({
+});
+});
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -42,3 +52,5 @@ const observer = new IntersectionObserver((entries) => {
   
   const hiddenElements = document.querySelectorAll('.hidden');
   hiddenElements.forEach((el) => observer.observe(el));
+
+  

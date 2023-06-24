@@ -14,26 +14,6 @@
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@materializecss/materialize@1.2.2/dist/css/materialize.css">
       <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 
-
-      <style>
-        .hidden{
-          display: none;
-        }
-
-        .result:hover .hidden{
-          display: inline-block;
-          color: red;
-        }
-
-
-        .no-border{
-          border-radius: 0;
-          height: 75px !important;
-          width: 60px !important;
-        }
-      </style>
-
-
     </head>
     <body>
 
@@ -108,6 +88,25 @@
 
 
             <div class="row">
+              <a class="col s6 m4 l2 book" href="book.html" title="ChainsawMan">
+                <img class="hoverable z-depth-2" src="https://upload.wikimedia.org/wikipedia/en/2/24/Chainsawman.jpg" width="100%" height="100%" alt="">
+                <label class="truncate grey-text booktitle">ChainsawMan</label>
+              </a>
+
+              <a class="col s6 m4 l2 book" href="" title="Pojo's Unofficial Big Book of Pokemon">
+                <img class="hoverable z-depth-2" src="https://kbimages1-a.akamaihd.net/80438db5-7382-4a3a-94dc-ffa66b5180cf/353/569/90/False/pojo-s-unofficial-big-book-of-pokemon.jpg" width="100%" height="100%" alt="">
+                <label class="truncate grey-text booktitle">Pojo's Unofficial Big Book of Pokemon</label>
+              </a>
+              
+              <a class="col s6 m4 l2 book" href="" title="Tainted Treats: Racism And The Rise Of Big Candy : The Salt : NPR">
+                <img class="hoverable z-depth-2" src="https://media.npr.org/assets/img/2015/10/30/racistad_large_wide-799ed03d886451303ae0f76f306ba4e11e61e1eb.jpg" width="100%" height="100%" alt="">
+                <label class="truncate grey-text booktitle">Tainted Treats: Racism And The Rise Of Big Candy : The Salt : NPR</label>
+              </a>
+
+              <a class="col s6 m4 l2 book" href="" title="Metamorphosis (Manga)">
+                <img class="hoverable z-depth-2" src="https://static.tvtropes.org/pmwiki/pub/images/metamorphosispage1.png" width="100%" height="100%" alt="">
+                <label class="truncate grey-text booktitle">Metamorphosis (Manga)</label>
+              </a>
 
             </div>
 
@@ -153,37 +152,6 @@
       <script>
 
 
-        $(document).ready(function(){
-
-          $('.genre').chips({
-            placeholder: 'Enter a genre',
-            secondaryPlaceholder: '+tag',
-            autocompleteOptions: {
-              data: {
-                'Action': null,
-                'Adventure': null,
-                'Ayoko na mabuhay': null
-              },
-              limit: Infinity,
-              minLength: 1
-            },
-
-            
-            
-            onChipSelect:() =>{
-              $('#filterchips').addChip({
-                tag: 'Baliw'
-
-              })
-            }
-          })
-          
-        });
-          
-        $(document).ready(function(){
-        $('select').formSelect({
-        });
-        });
 
         $(document).ready(function(){
         $('.tooltipped').tooltip({

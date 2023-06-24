@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@materializecss/materialize@1.2.2/dist/css/materialize.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+  </head>
+
+  <body class="orange lighten-5">
+    <header>
+
+        <!--Nav-->
+        <nav class="pmain">
+            <div class="nav-wrapper indigo darken-3">
+                <a href="./index.html" class="brand-logo center"><img src="/static/img/login/aclc_logo.png" width="55px" alt="aclclogo"></a>
+                
+                <a href="#" data-target="slide-out" class="sidenav-trigger" ><i class="medium material-icons">menu</i></a>
+                <div class="col s12 hide-on-med-and-down">
+                    <a class="breadcrumb" href="index.html"style="margin-left: 10px;">Home</a>
+                    <a class="breadcrumb" href="profile.html">Profile</a>
+                    <a class="breadcrumb" >My Library</a>
+                </div>
+            </div>
+        </nav>
+
+        <!--Sidenav-->
+        <div id="sidenav"></div>
+      </header>
+       
+      <div class="pmain">
+        
+        <div class="row" style="padding: .1rem;" >
+
+          <!--FILTER FORM HERE-->
+            <div class=" col s12" style="padding: 0 1.5rem;">
+                <div class="card-panel row">
+                    <div class="input-field col s12 m6">
+                        <i class="tiny material-icons fa-solid fa-magnifying-glass prefix" style="font-size: 1rem; line-height: 0.8;"></i>
+                        <input id="search" type="search" class="validate no-padding" style="height: auto; margin-left: 1.5rem;" placeholder="Search">
+                    </div>
+
+                    <div class="col s4 m2" style="margin-top: 1.1rem;">
+                      <p>
+                        <label>
+                          <input type="checkbox" />
+                          <span>Show Only In-Progress</span>
+                        </label>
+                      </p>                 
+                    </div>
+
+                    <div class="col s4 m2" style="margin-top: 1.1rem;">
+                      <p>
+                        <label>
+                          <input type="checkbox" />
+                          <span>Show Only</span>
+                        </label>
+                      </p>                 
+                    </div>
+
+                    <div class="input-field col s12 m2 right">
+                        <button class="btn btn-small right">apply</button>
+                    </div>
+                </div>
+            </div>
+
+            <!--END FILTER FORM-->
+
+            <!--Table-->
+            <div class="col s12">
+                <div class="card-panel" style="overflow-x:auto;">
+                  <table class="">
+                    <tr>
+                      <th data-column="book" data-order="desc">Book</th>
+                      <th data-column="publisher" data-order="desc">Publisher</th>
+                      <th data-column="borrower" data-order="desc">Borrower</th>
+                      <th data-column="reserved" data-order="desc">Reserved</th>
+                      <th data-column="loaned" data-order="desc">Loaned</th>
+                      <th data-column="return" data-order="desc">Returned</th>
+                      <th data-column="status" data-order="desc">Status</th>
+                    </tr>
+                  </table>
+                  
+                  <tbody id="Table">
+                    
+                  </tbody>
+
+                  <script>
+                    var myArray = [
+                      {'link': 'book.html', 'book':'White people ewasdfasdfasdfasdfasdfasdfds', 'publisher':'Niggermanasdfasdfasdf', 'borrower':'hehehe', 'reserved':'9/11/2001', 'loaned':'9/11/2001', 'returned':'', 'status':'Loaned'},
+                      {'link': '#', 'book':'White people ew', 'publisher':'iggerman', 'borrower':'hehehe', 'reserved':'9/11/2000', 'loaned':'9/11/2001', 'returned':'', 'status':'Loaned'}
+                    ]
+                  //   jQuery(document).ready(function($) {
+                  //   $('th').on('click', function(){
+                  //     var column = $(this).data('column')
+                  //     var order = $(this).data('order')
+                  //     console.log(column, order, myArray)
+                      
+                  //     if(order == 'desc'){
+                  //       $(this).data('order', "asc")
+                  //       myArray = myArray.sort((a,b) => a[column] > b[column] ? 1 : -1)
+                      
+                  //     }else{
+                  //       $(this).data('order', "desc")
+                  //       myArray = myArray.sort((a,b) => a[column] < b[column] ? 1 : -1)
+                  //     }
+                  //     buildTable(myArray)
+                  //   })
+                  // });
+
+                    buildTable(myArray)
+                    
+                    function buildTable(data){
+                      var table = document.querySelector("Table")
+                      
+                      for (var i = 0; i < data.length; i++){
+                        var row =  `<tr class="hoverable clickable-row" data-href="${data[i].link}">
+                                      <td class="indigo-text">${data[i].book}</td> 
+                                      <td class="indigo-text">${data[i].publisher} </td> 
+                                      <td class="indigo-text">${data[i].borrower} </td>
+                                      <td class="indigo-text">${data[i].reserved}</td>
+                                      <td class="indigo-text">${data[i].loaned}</td> 
+                                      <td class="indigo-text">${data[i].returned}</td>
+                                      <td class="indigo-text">${data[i].status}</td>
+                                    </tr>`
+                        table.innerHTML += row        
+                      }
+                    }
+
+                    jQuery(document).ready(function($) {
+                    $(".clickable-row").click(function() {
+                      window.location = $(this).data("href");
+                      });
+                    });
+                  </script>
+                </div>
+            </div>
+
+
+            
+        </div>
+        
+      </div>
+      
+      
+      <script src="https://kit.fontawesome.com/2c47afb381.js" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@materializecss/materialize@1.2.2/dist/js/materialize.min.js"></script>
+      <script src="/static/js/index.js"></script>
+
+  </body>
+</html>

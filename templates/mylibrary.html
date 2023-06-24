@@ -58,76 +58,81 @@
           <!--Search-->
           <div class="row">
             <div class="card-panel">
-              
+              <div class="input-field" style="width: 100%;">
+                <i class="tiny material-icons fa-solid fa-magnifying-glass prefix" style="font-size: 1rem; line-height: 0.8;"></i>
+                <input id="search" type="search" class="validate no-padding" style="height: auto; margin-left: 1.5rem;" placeholder="Search">
+              </div>
             </div>
           </div>
     
           <!--FilterSearch-->
-          <div class="row hide-on-small-and-down">
-            <div class="card-panel">
-    
+          <ul class="hide-on-small-and-down card-panel" style="padding: 2rem;">
+            <!--Genre-->
+            <li class="row" data-select2-id="5">
+              <div class="input-field" data-select2-id="16">
+                <p style="font-size: .8rem; color: #9e9e9e; font-weight: 100;">Genre</p>
+                <select id="genre" class="select2 browser-default select2-hidden-accessible" name="category" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                  <option value="" selected="" data-select2-id="3"></option>
+                  <option value="1" data-select2-id="13">Comics &amp; Graphic Novels</option>
+              </select><span class="select2 select2-container select2-container--default select2-container--below" dir="ltr" data-select2-id="2" style="width: 260.25px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-category-yw-container"><span class="select2-selection__rendered" id="select2-category-yw-container" role="textbox" aria-readonly="true"></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
             </div>
-          </div>
+            </li>
+
+            <!--Status-->
+            <li class="row">
+              <div class="input-field">
+                <select id="form-select-2" multiple>
+                  <option value="1" selected>All</option>
+                  <option value="2">Available</option>
+                  <option value="3">Not Available</option>
+                </select>
+                <label for="form-select-2">Status</label>
+              </div>
+            </li>
+
+            <!--Publish Date-->
+            <li class="row">
+              <div class="input-field">
+                <select id="form-select-2" multiple>
+                  <option value="1" selected>All</option>
+                  <option value="2">2020+</option>
+                  <option value="3">2010-2020</option>
+                  <option value="4">2000-2010</option>
+                  <option value="5">1990-2000</option>
+                  <option value="3">1990 below</option>
+                </select>
+                <label for="form-select-2">Publish Date</label>
+              </div>
+            </li>
+            
+          </ul>
         </div>
 
         <!--Content Left-->
         <div class="col s12 m8 left">
-          <div class="card-panel" style="padding: 36px;">
+          <div class="card-panel">
             
             <div class="row">
+              <a class="col s6 m4 l4 xl3 book" href="book.html" title="ChainsawMan">
+                <img class="hoverable z-depth-2" src="https://upload.wikimedia.org/wikipedia/en/2/24/Chainsawman.jpg" width="100%" height="100%" alt="">
+                <label class="truncate grey-text booktitle">ChainsawMan</label>
+              </a>
 
-
-              <div class="col s6 m4 l3 result">
-                <div class="z-depth-1 resultcard hoverable" >
-                  <a href="" class="hover" >
-                    <img class="responsive-img result-img" src="https://preview.redd.it/gpc9cxtw88p91.jpg?auto=webp&s=5abb7c79a17b879828c9a4f8c2c349b21c047286" alt="" >
-                    <div class="cardheader hidden">
-                      <h5 class="card-title center">ChainsawMan</h5>
-                      <p></p>
-                    </div>
-
-                    <a class="resultbtn btn-floating transparent z-depth-0 hoverable waves-effect waves-float waves-red waves-ripple waves-light" onclick="fav1()" style="position: absolute; top: 5%; right: 0;">
-                      <i class="material-icons" style="color: black;">favorite_outline</i>
-                    </a>
-
-                    <div class="resultstat grey circle hoverable" ></div>
-                  </a>
-                </div>
-              </div>
-
-              <div class="col s6 m4 l3 result">
-                <div class="z-depth-1 resultcard hoverable">
-                  <a href="" class="hover">
-                    <img class="responsive-img result-img" src="http://books.google.com/books/content?id=LmxUzQEACAAJ&amp;printsec=frontcover&amp;img=1&amp;zoom=1&amp;source=gbs_api" alt="" >
-                    <div class="cardheader hidden">
-                      <h5 class="card-title center">ChainsawMan vol 2</h5>
-                      <p></p>
-                    </div>
-                    <a class="resultbtn btn-floating transparent z-depth-0 hoverable waves-effect waves-float waves-red waves-ripple waves-light" onclick="fav1()" style="position: absolute; top: 5%; right: 0;">
-                      <i class="material-icons"  style="color: black;">favorite_outline</i>
-                    </a>
-
-                    <div class="resultstat green circle hoverable"></div>
-                  </a>
-                </div>
-              </div>
-
+              <a class="col s6 m4 l4 xl3 book" href="" title="Pojo's Unofficial Big Book of Pokemon">
+                <img class="hoverable z-depth-2" src="https://kbimages1-a.akamaihd.net/80438db5-7382-4a3a-94dc-ffa66b5180cf/353/569/90/False/pojo-s-unofficial-big-book-of-pokemon.jpg" width="100%" height="100%" alt="">
+                <label class="truncate grey-text booktitle">Pojo's Unofficial Big Book of Pokemon</label>
+              </a>
               
-              <div class="col s6 m4 l3 result">
-                <div class="z-depth-1 resultcard hoverable">
-                  <a href="" class="hover" style="line-height: 0;">
-                    <img class="responsive-img result-img" src="https://kbimages1-a.akamaihd.net/80438db5-7382-4a3a-94dc-ffa66b5180cf/1200/1200/False/pojo-s-unofficial-big-book-of-pokemon.jpg" alt="" >
-                    <div class="cardheader hidden">
-                      <h5 class="card-title center">Pokemon: Super Extra Deluxe Essential Handbook</h5>
-                      <p></p>
-                    </div>
-                  </a>
-                </div>
-              </div>
-  
+              <a class="col s6 m4 l4 xl3 book" href="" title="Tainted Treats: Racism And The Rise Of Big Candy : The Salt : NPR">
+                <img class="hoverable z-depth-2" src="https://media.npr.org/assets/img/2015/10/30/racistad_large_wide-799ed03d886451303ae0f76f306ba4e11e61e1eb.jpg" width="100%" height="100%" alt="">
+                <label class="truncate grey-text booktitle">Tainted Treats: Racism And The Rise Of Big Candy : The Salt : NPR</label>
+              </a>
 
+              <a class="col s6 m4 l4 xl3 book" href="" title="Metamorphosis (Manga)">
+                <img class="hoverable z-depth-2" src="https://static.tvtropes.org/pmwiki/pub/images/metamorphosispage1.png" width="100%" height="100%" alt="">
+                <label class="truncate grey-text booktitle">Metamorphosis (Manga)</label>
+              </a>
 
-            
             </div>
               
             
